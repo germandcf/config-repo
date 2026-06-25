@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: product-api
+
+  profiles:
+    active: dev
+
+  graphql:
+    graphiql:
+      enabled: true
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  cache:
+    type: redis
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, circuitbreakers, circuitbreakerevents
+
+  endpoint:
+    health:
+      show-details: always
+
+  health:
+    circuitbreakers:
+      enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: https://eureka-server-tecylab-hyg9gwc4a2eebpek.canadacentral-01.azurewebsites.net/eureka/
+    fetch-registry: true
+    register-with-eureka: true

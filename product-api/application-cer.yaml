@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    drive-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql-230dcf3-germandcf-a820.a.aivencloud.com:10589/defaultdb?ssl-mode=REQUIRED
+    username: avnadmin
+    password: ${AIVEN_MYSQL_PASSWORD}
+
+  data:
+    mongodb:
+      uri: mongodb+srv://Admin:Admin@cluster0.irs5rn6.mongodb.net/?appName=Cluster0
+      database: Product-API-Auditoria
+
+    redis:
+      host: typical-turbosweet-aquaish-77076.db.redis.io
+      port: 17643
+      username: default
+      password: sCPZkRm0IN7GXTkAot6XJwjuyJJ00GAG
+
+  cache:
+    type: redis
