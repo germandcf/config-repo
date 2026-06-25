@@ -7,14 +7,14 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb+srv://Admin:Admin@cluster0.irs5rn6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&connectTimeoutMS=30000&socketTimeoutMS=30000&serverSelectionTimeoutMS=30000
+      uri: ${MONGODB_URI}
       database: Product-API-Auditoria
 
     redis:
       host: ultragentle-superb-courageous-82673.db.redis.io
       port: 16972
       username: default
-      password: OeHZasu4JswTRj9aPQ32BySY6QsE9IfV
+      password: ${REDIS_PASSWORD}
 
   cache:
     type: redis
