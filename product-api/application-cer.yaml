@@ -7,14 +7,14 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb+srv://Admin:Admin@cluster0.irs5rn6.mongodb.net/?appName=Cluster0
+      uri: ${MONGODB_URI}
       database: Product-API-Auditoria
 
     redis:
       host: typical-turbosweet-aquaish-77076.db.redis.io
       port: 17643
       username: default
-      password: sCPZkRm0IN7GXTkAot6XJwjuyJJ00GAG
+      password: ${REDIS_PASSWORD}
 
   cache:
     type: redis
